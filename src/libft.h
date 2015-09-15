@@ -14,6 +14,10 @@ void    ft_putchar(char c);
 void    ft_putnbr(int n);
 void    ft_putstr(const char *str);
 void    ft_putendl(const char *str);
+void    *ft_memalloc(size_t size);
+void    ft_memdel(void **ap);
+void    ft_strdel(char **as);
+void    ft_strclr(char *s);
 size_t  ft_strlen(const char *str);
 size_t  ft_strlcat(char *dest, const char *src, size_t size);
 int     ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -36,5 +40,6 @@ char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
 char    *ft_strstr(const char *str, const char *sub);
 char    *ft_strnstr(const char *str, const char *sub, size_t n);
+char    *ft_strnew(size_t size);
 
 #endif

@@ -12,16 +12,16 @@
 
 NAME= libft.a
 CC= gcc
-CFLAGS= -Wall -Werror -Wextra
-SRCS= -I/src
-OBJS= $(SRCS:.c=.o)
+CFLAGS= -Wall -Werror -Wextra -I$(SRCS)
+SRCS= ./src/*.c
+OBJS= $(SRCS%.o: %.c)
 
 all: $(NAME)
 
-
 $(NAME): $(OBJS) 
-	$(CC) -o $(NAME) $(FLAGS) $(OBJS)
 	ar -rc $(NAME) $(OBJS) 
+
+$(OBJS): $(CC) -c $(CFLAGS) $(SRC)
 
 clean : 
 	rm -rf $(OBJS)
