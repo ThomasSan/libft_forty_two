@@ -18,6 +18,8 @@ void    *ft_memalloc(size_t size);
 void    ft_memdel(void **ap);
 void    ft_strdel(char **as);
 void    ft_strclr(char *s);
+void    ft_striter(char *s, void (*f)(char *));
+void    ft_striteri(char *s, void (*f)(unsigned int, char *));
 size_t  ft_strlen(const char *str);
 size_t  ft_strlcat(char *dest, const char *src, size_t size);
 int     ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -31,6 +33,8 @@ int     ft_isascii(int c);
 int     ft_isprint(int c);
 int     ft_tolower(int c);
 int     ft_toupper(int c);
+int     ft_strequ(char const *s1, char const *s2);
+int     ft_strnequ(char const *s1, char const *s2, size_t n);
 char    *ft_strdup(const char *s);
 char    *ft_strcpy(char *dest, const char *src);
 char    *ft_strncpy(char *dest, const char *src, size_t n);
@@ -41,5 +45,7 @@ char    *ft_strrchr(const char *s, int c);
 char    *ft_strstr(const char *str, const char *sub);
 char    *ft_strnstr(const char *str, const char *sub, size_t n);
 char    *ft_strnew(size_t size);
+char    *ft_strmap(char const *s, char (*f)(char));
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
